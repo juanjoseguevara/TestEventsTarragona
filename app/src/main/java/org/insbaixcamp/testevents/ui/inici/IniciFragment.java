@@ -21,7 +21,6 @@ import org.insbaixcamp.testevents.ui.home.HomeViewModel;
 public class IniciFragment extends Fragment {
 
     private IniciViewModel iniciViewModel;
-    private FragmentIniciBinding binding;
 
     public static IniciFragment newInstance() {
         return new IniciFragment();
@@ -33,8 +32,6 @@ public class IniciFragment extends Fragment {
         iniciViewModel =
                 new ViewModelProvider(this).get(IniciViewModel.class);
 
-        binding = FragmentIniciBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
 
         final TextView textView = binding.textHome;
         iniciViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
