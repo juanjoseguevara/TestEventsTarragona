@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="org.insbaixcamp.testevents.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="org.insbaixcamp.testevents.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/iniciFragment"
+        android:name="org.insbaixcamp.testevents.ui.inici.IniciFragment"
+        android:label="inici_fragment"
+        tools:layout="@layout/inici_fragment" />
+    <navigation android:id="@+id/navigation"
+        app:startDestination="@id/nav_gallery">
+        <navigation android:id="@+id/navigation3" />
+    </navigation>
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="org.insbaixcamp.testevents.ui.gallery.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" />
+    <fragment
+        android:id="@+id/eventFragment"
+        android:name="org.insbaixcamp.testevents.EventFragment"
+        android:label="event_fragment"
+        tools:layout="@layout/event_fragment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="org.insbaixcamp.testevents.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+</navigation>
